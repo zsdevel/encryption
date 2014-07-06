@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link type="text/css" rel="stylesheet" href="css/base.css"  />
+        <script type="text/javascript" charset="utf-8" src="js/encrypt.js"></script>
+    </head>
+    <body onload="initialize()">
+        <div id="cesar">
+            <h2>Criptografía clásica</h2>
+
+            <select id="algorithm" onfocus="print_algorithms()" onmouseover="print_algorithms()">
+                <option>Cesar</option>
+                <option>Cesar con clave</option>
+                <option>Vigenere</option>
+            </select>
+            <select id="operation" onchange="print_algorithms(this)">
+                <option selected="selected">Cifrar</option>
+                <option>Descifrar</option>
+            </select>
+            <div id="notify1" class="notify"></div>
+            <div id="cipher">
+                Mensaje claro
+                <textarea id="input" onchange="exec(this)"></textarea>
+                Clave
+                <input type="text" id="key" onchange="exec(this)" />
+                Mensaje cifrado
+                <textarea id="output" onchange="exec(this)"></textarea>
+            </div>
+
+
+        </div>
+    </body>
+</html>
